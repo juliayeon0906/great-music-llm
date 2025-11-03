@@ -1,4 +1,4 @@
-import heroImage from "../assets/hero.jpg";
+import heroImage from "../assets/hero.jpg?w=800&webp";
 import { Search, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -13,6 +13,7 @@ export default function Hero() {
       <img
         src={heroImage}
         alt="Orchestra performance"
+        loading="lazy"
         className="absolute w-full h-full object-cover"
       />
       {/* Overlay */}
@@ -137,7 +138,7 @@ export default function Hero() {
           className="text-5xl text-shadow-lg md:text-6xl font-playfair-sc mb-7"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
           Experience the Beautiful and Power
@@ -147,7 +148,7 @@ export default function Hero() {
           className="px-6 py-3 text-shadow-md cursor-pointer bg-gold font-semibold shadow-md rounded-full hover:inset-shadow-sm hover:bg-gold-hover duration-500"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{
             duration: 0.8,
             delay: 0.7,

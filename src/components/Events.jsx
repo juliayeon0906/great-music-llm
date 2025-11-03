@@ -1,6 +1,6 @@
-import event1 from "../assets/event1.jpg";
-import event2 from "../assets/event2.jpg";
-import event3 from "../assets/event3.jpg";
+import event1 from "../assets/event1.jpg?w=800&webp";
+import event2 from "../assets/event2.jpg?w=800&webp";
+import event3 from "../assets/event3.jpg?w=800&webp";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
@@ -56,7 +56,7 @@ export default function Events() {
         className="text-4xl font-playfair-sc text-center mb-14"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         Events
@@ -68,7 +68,7 @@ export default function Events() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true }}
       >
         {events.map((event, idx) => (
           <motion.div
@@ -83,6 +83,7 @@ export default function Events() {
             <img
               src={event.image}
               alt={event.title}
+              loading="lazy"
               className="w-full h-48 object-cover"
             />
             <div className="p-4 flex flex-col flex-grow">
@@ -112,7 +113,7 @@ export default function Events() {
         className="flex justify-end my-6"
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <a

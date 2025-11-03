@@ -1,4 +1,4 @@
-import aboutImage from "../assets/about.jpg";
+import aboutImage from "../assets/about.jpg?w=800&webp";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -7,6 +7,7 @@ export default function About() {
       <img
         src={aboutImage}
         alt="Close-up of cello"
+        loading="lazy"
         className="w-full md:w-1/2 h-auto object-cover rounded-lg mb-8 md:mb-0 md:mr-10"
       />
       <div className="md:w-1/2">
@@ -14,7 +15,7 @@ export default function About() {
           className="text-4xl text-shadow-lg mb-4 font-playfair-sc"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true}}
           transition={{
             duration: 1,
             delay: 0.3,
@@ -27,7 +28,7 @@ export default function About() {
           className="mb-8 tracking-wide"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{
             duration: 0.8,
             delay: 0.5,
@@ -44,7 +45,7 @@ export default function About() {
           className="px-6 py-3 cursor-pointer bg-gold text-shadow-md font-semibold shadow-md rounded-full hover:shadow-xl hover:bg-gold-hover duration-500"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{
             duration: 0.8,
             delay: 0.7,

@@ -110,6 +110,7 @@ export default function Artists() {
               <motion.img
                 src={artist.image}
                 alt={artist.name}
+                loading="lazy"
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
